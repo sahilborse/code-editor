@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useMemo } from "react";
 import { Remarkable } from "remarkable";
 import { Container, Row, Col } from "react-bootstrap";
 import { useLocalStorage } from "../../Hooks/LocalStorage";
@@ -58,7 +58,7 @@ function Editor() {
 //     quotes: "“”‘’",
 //     typographer: true,
 //   });
-  md.use(linkify);
+//  md.use(linkify);
   const md = useMemo(() => {
     const remarkable = new Remarkable({
       html: true,
