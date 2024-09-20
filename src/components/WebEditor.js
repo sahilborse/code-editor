@@ -51,7 +51,7 @@ function LaunguageManager() {
     updateHtmlStrorage(html);
     updateCssStrorage(css);
     updateJsStrorage(js);
-  }, [html, css, js]);
+  }, [html, css, js,updateHtmlStrorage,updateCssStrorage,updateJsStrorage]);
 
   return (
     <div>
