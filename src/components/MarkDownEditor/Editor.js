@@ -51,14 +51,25 @@ function Editor() {
     color: "black",
   };
 
-  var md = new Remarkable({
-    html: true,
-    xhtmlOut: true,
-    langPrefix: "language-",
-    quotes: "“”‘’",
-    typographer: true,
-  });
+//   var md = new Remarkable({
+//     html: true,
+//     xhtmlOut: true,
+//     langPrefix: "language-",
+//     quotes: "“”‘’",
+//     typographer: true,
+//   });
   md.use(linkify);
+  const md = useMemo(() => {
+    const remarkable = new Remarkable({
+      html: true,
+      xhtmlOut: true,
+      langPrefix: "language-",
+      quotes: "“”‘’",
+      typographer: true,
+    });
+    remarkable.use(linkify);
+    return remarkable;
+  }, []);
 
   const [userInput, updateStorageInput] = useLocalStorage(
     "mdEditor",
