@@ -6,7 +6,7 @@ import { linkify } from "remarkable/linkify";
 // import TextareaAutosize from "react-autosize-textarea";
 import TextareaAutosize from 'react-textarea-autosize';
 
-// import Toolbar from "./Toolbar";
+import Toolbar from "./Toolbar";
 import Footer from "../Footer";
 import fileDownload from "js-file-download";
 import "bootstrap/dist/css/bootstrap.min.css";
