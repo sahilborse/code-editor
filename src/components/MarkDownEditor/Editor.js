@@ -69,7 +69,7 @@ function Editor() {
   useEffect(() => {
     let res = md.render(userInput);
     updateOut(res);
-  }, [userInput]);
+  }, [userInput,md]);
 
   const handelChange = (e) => {
     updateStorageInput(e.target.value);
