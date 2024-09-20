@@ -101,6 +101,7 @@ function LaunguageManager() {
       <Container fluid={true} className="pane pane-bottom">
         <Row noGutters={true}>
           <iframe
+            name="Live-site"
             srcDoc={srcDoc}
             className="output-pane"
             allowFullScreen
